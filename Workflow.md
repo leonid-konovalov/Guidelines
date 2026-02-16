@@ -1,5 +1,4 @@
-If you are assigned a new issue (project or subproject), 
-follow the instructions below.
+To contribute, follow the instructions below.
 
 1. Create a new remote branch for the issue.
    * The branch must originate from the parent branch, which is the parent 
