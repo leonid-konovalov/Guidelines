@@ -14,17 +14,32 @@
 
 ### Typing
 
-* Specify parameter and return types explicitly:
-    ```
-    # Correct:
-    def getFactorValue(self, scopeAssignment: VariableAssignment) -> float:
-        pass
-    ```
-    ```
-    # Wrong:
-    def getFactorValue(self, scopeAssignment):
-        pass
-    ```
+* Specify parameter and return types explicitly, unless ```None``` is returned:
+  ```
+  # Correct:
+  def getFactorValue(self, scopeAssignment: VariableAssignment) -> float:
+      pass
+  ```
+  ```
+  # Wrong:
+  def getFactorValue(self, scopeAssignment):
+      pass
+  ```
+  ```
+  # Correct:
+  def update(self):
+      pass
+  ```
+  ```
+  # Wrong:
+  def update(self) -> None:
+      pass
+  ```
+  ###### Rationale
+  * Explicit return types enable better type hinting, so errors may be detected 
+  earlier.
+  * Syntax separation between functions and procedures makes the code more 
+  readable.  
 
 * Where applicable, use ``typing`` library:
   ```
@@ -138,7 +153,8 @@ be done in different languages, while design is practically not.
   # Correct:
   if (
       "." not in sourceFolderElementName
-      and "__" not in sourceFolderElementName
+      and 
+      "__" not in sourceFolderElementName
   ):
       pass
   ```
@@ -206,6 +222,13 @@ be done in different languages, while design is practically not.
       observationDate=observationDate
       )
   ```
+    ```
+  # Wrong:
+  result = self.__jointDistribution.getReducedFactor(
+      conditioning=conditioning, 
+      independenceMap=independenceMap,
+      observationDate=observationDate)
+  ```
 
 ##### Function and Method Arguments
 
@@ -265,6 +288,20 @@ be done in different languages, while design is practically not.
   # Wrong:
   for var in df.getVars():
      pass
+  ```
+  
+* Do not use single-letter variable names in loops. Use clear names instead:
+  ```
+  # Wrong:
+  for i in range(covariance.shape[0]):
+      for j in range(covariance.shape[1]):
+          print(covariance[i, j])
+  ```
+  ```
+  # Correct:
+  for rowIndex in range(covariance.shape[0]):
+      for columnIndex in range(covariance.shape[1]):
+          print(covariance[rowIndex, columnIndex])
   ```
 
 * Avoid use of abbreviations, unless ubiquitously used ones:
