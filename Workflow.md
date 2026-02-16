@@ -28,9 +28,9 @@ To contribute, follow the instructions below.
     * [ ] Run unit tests one more time when all done.
    
 4. Get the work acceptance:
-   * Create a merge request from the issue branch to the parent branch;
-   * Add relevant reviewers;
-   * If changes requested by a reviewer, repeat steps 2-3.
+   * [ ] Create a merge request from the issue branch to the parent branch;
+   * [ ] Add relevant reviewers;
+   * [ ] If changes requested by a reviewer, repeat steps 2-3.
 
 5. When merge request is approved, merge the issue branch into the parent 
 branch:
