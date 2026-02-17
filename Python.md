@@ -224,12 +224,29 @@ be done in different languages, while design is practically not.
       observationDate=observationDate
       )
   ```
-    ```
+  ```
   # Wrong:
   result = self.__jointDistribution.getReducedFactor(
       conditioning=conditioning, 
       independenceMap=independenceMap,
       observationDate=observationDate)
+  ```
+
+* Do not increase indentation more than by one level:
+  ```
+  # Wrong:
+  drift[index + 1] = drift[index] \
+                        + difference / volatility[index]
+  ```
+  ```
+  # Correct: 
+  drift[index + 1] = drift[index] \
+      + difference / volatility[index] ** 2
+  ```
+  ```
+  # Correct: 
+  drift[index + 1] = \
+      drift[index] + difference / volatility[index] ** 2
   ```
 
 ##### Function and Method Arguments
@@ -292,7 +309,8 @@ be done in different languages, while design is practically not.
      pass
   ```
 
-* Do not use single-letter variable names in loops. Use clear names instead:
+* Do not use single-letter variable names in loops. Use meaningful names 
+instead:
   ```
   # Wrong:
   for i in range(covariance.shape[0]):
