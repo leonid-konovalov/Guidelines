@@ -36,10 +36,12 @@
       pass
   ```
   ###### Rationale
-  * Explicit return types enable better type hinting, so errors may be detected 
-  earlier.
-  * Syntax separation between functions and procedures makes the code more 
-  readable.  
+    * Explicit return types enable better type hinting, so errors may be
+      detected
+      earlier.
+    * Syntax separation between functions and procedures makes the code more
+      readable.
+
 
 * Where applicable, use ``typing`` library:
   ```
@@ -126,7 +128,7 @@ be done in different languages, while design is practically not.
   )
   ```
 
-* Do not place subcall parameters on separate lines, if they fit into one 
+* Do not place subcall parameters on separate lines, if they fit into one
   line:
     ```
     # Correct:
@@ -159,8 +161,8 @@ be done in different languages, while design is practically not.
       pass
   ```
   ###### Rationale
-  * Good readability.
-  * Compatibility with PyCharm autoformatting.
+    * Good readability.
+    * Compatibility with PyCharm autoformatting.
 
 
 * If an import statement cannot fit into one line,
@@ -237,7 +239,7 @@ be done in different languages, while design is practically not.
   # Correct:
   return factor.getValue({"X": 0, "Y": 1})
   ```
-  
+
 * Use kwargs to call a function or method with multiple arguments:
   ```
   # Correct:
@@ -271,10 +273,10 @@ be done in different languages, while design is practically not.
       assignments=[{A: 1, C: 0}],
       values=[1],
   )
-  ```
-  
+  ``` 
+
   ###### Rationale
-  * This Python feature is uncommon in other languages.
+  This Python feature is uncommon in other languages.
 
 ##### Naming
 
@@ -289,7 +291,7 @@ be done in different languages, while design is practically not.
   for var in df.getVars():
      pass
   ```
-  
+
 * Do not use single-letter variable names in loops. Use clear names instead:
   ```
   # Wrong:
@@ -351,7 +353,6 @@ be done in different languages, while design is practically not.
   )
   ```
 
-
 ##### Imports
 
 * Group imports according to PEP8.
@@ -386,8 +387,8 @@ be done in different languages, while design is practically not.
   ```
 
   ###### Rationale
-  * Ordered imports are easier to read and edit. 
-  * Merge conflicts are avoided.
+    * Ordered imports are easier to read and edit.
+    * Merge conflicts are avoided.
 
 
 * Erase unused imports.
@@ -428,9 +429,9 @@ be done in different languages, while design is practically not.
       :return: spot fcdc exchange rate
       """
   ```
-  
+
   ###### Rationale
-  Docstrings are difficult to maintain, they are not updated automatically 
+  Docstrings are difficult to maintain, they are not updated automatically
   in contrast to function, method and variable names.
 
 
