@@ -8,8 +8,8 @@
     * [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
     * [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
 
-* Apply [GoF patterns](https://en.wikipedia.org/wiki/Design_Patterns) when 
-suitable
+* Apply [GoF patterns](https://en.wikipedia.org/wiki/Design_Patterns) when
+  suitable
 
 * [Write first, optimize later](
   https://martinfowler.com/ieeeSoftware/yetOptimization.pdf
@@ -30,12 +30,12 @@ With a few exceptions (such as factories), keep classes small:
 ### Methods
 
 * Keep methods small
-  * between 10 and 32 lines (fits on a screen) is acceptable
-  * more than 32 lines must be refactored
     * Not more 10 lines is ideal
+    * Between 10 and 32 lines (fits on a screen) is acceptable
+    * More than 32 lines must be refactored
 * Make the separation between intention and implementation. If effort needed
-to figure out 'what' a fragment of code is doing, extract it into a method and 
-name it after 'what'.
+  to figure out 'what' a fragment of code is doing, extract it into a method
+  and name it after 'what'.
 * Make class methods private if they are not used outside of the class
 
 ### References
