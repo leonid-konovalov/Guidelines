@@ -1,6 +1,6 @@
 ### General guidelines
 
-* Follow the next sets principles:
+* Follow the next sets of principles:
     * [SOLID](https://en.wikipedia.org/wiki/SOLID)
     * [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 
