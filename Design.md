@@ -19,7 +19,7 @@ suitable
 
 With a few exceptions (such as factories), keep classes small:
 
-* Fewer than 100 lines (excluding comments) is ideal
+* Not more than 100 lines (excluding comments) is ideal
 * Between 100 and 200 lines is acceptable
 * More than 200 lines should be refactored
 
@@ -30,9 +30,9 @@ With a few exceptions (such as factories), keep classes small:
 ### Methods
 
 * Keep methods small
-  * 10 lines is ideal 
   * between 10 and 32 lines (fits on a screen) is acceptable
   * more than 32 lines must be refactored
+    * Not more 10 lines is ideal
 * Make the separation between intention and implementation. If effort needed
 to figure out 'what' a fragment of code is doing, extract it into a method and 
 name it after 'what'.
