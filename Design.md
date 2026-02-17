@@ -32,6 +32,7 @@ With a few exceptions (such as factories), keep classes small:
 * Keep methods small
   * 10 lines is ideal 
   * between 10 and 32 lines (fits on a screen) is acceptable
+  * more than 32 lines must be refactored
 * Make the separation between intention and implementation. If effort needed
 to figure out 'what' a fragment of code is doing, extract it into a method and 
 name it after 'what'.
