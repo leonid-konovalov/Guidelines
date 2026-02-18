@@ -324,6 +324,16 @@ instead:
           print(covariance[rowIndex, columnIndex])
   ```
 
+* Do not exclude vowels:
+  ```
+  # Wrong:
+  idx = 64
+  ```
+  ```
+  # Correct:
+  index = 64
+  ```
+
 * Avoid use of abbreviations, unless ubiquitously used ones:
   ```
   # Correct:
@@ -426,6 +436,8 @@ instead:
   in different contexts.
 
 ##### Documentation
+
+* Write documentation in English.
 
 * Docstrings are not mandatory, with well naming they can be often omitted.
   ```
