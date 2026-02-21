@@ -1,10 +1,10 @@
 To contribute, please follow the instructions below.
 
 1. Create a new remote branch for the issue.
-   * The branch must originate from the parent branch, which is the parent
-     issue branch if there is one or ``master`` branch otherwise.
-   * The branch name must capture the issue summary.
-   * Use lowerCamelCase for the branch name.
+    * The branch must originate from the parent branch, which is the parent
+      issue branch if there is one or ``master`` branch otherwise.
+    * The branch name must capture the issue summary.
+    * Use lowerCamelCase for the branch name.
 
 2. Commit and push changes required to the issue branch.
     * Follow [Design Guidelines](
@@ -23,10 +23,11 @@ To contribute, please follow the instructions below.
     * Replace automatically generated commit messages with meaningful ones.
     * Do not use issue or branch names in commit messages.
     * Do not commit
-      * temporary files (e.g., *.pyc, *.aux),
-      * binary files (e.g., *.pkl, *.pdf),
-      * image files,
-      * other files that are not suitable for version control (e.g., *.ipynb).
+        * temporary files (e.g., *.pyc, *.aux),
+        * binary files (e.g., *.pkl, *.pdf),
+        * image files,
+        * other files that are not suitable for version control (e.g., *
+          .ipynb).
 
 3. Finalize the work:
     * [ ] Merge the parent branch into the issue branch;
