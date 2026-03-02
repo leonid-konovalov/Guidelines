@@ -309,8 +309,8 @@ be done in different languages, while design is practically not.
      pass
   ```
 
-* Do not use single-letter variable names in loops. Use meaningful names 
-instead:
+* Do not use single-letter variable names in loops. Use meaningful names
+  instead:
   ```
   # Wrong:
   for i in range(covariance.shape[0]):
@@ -353,6 +353,16 @@ instead:
       Represents Credit Support Annex to ISDA master agreement.
       """
       pass
+  ```
+
+* Do not use an adjective or adverb as a variable name:
+  ```
+  # Wrong:
+  restored = storage.getObject(key)
+  ```
+  ```
+  # Correct:
+  restoredObject = storage.getObject(key)
   ```
 
 * In most cases variable and parameter names must capture their roles,
