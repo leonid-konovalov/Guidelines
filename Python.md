@@ -488,3 +488,24 @@ be done in different languages, while design is practically not.
 
       pass
   ```
+
+### Exceptions
+
+* Catch only specific exceptions:
+  ```
+  # Wrong:
+  try:
+      return storage.getObject(key)
+  except Exception:
+      pass
+  ```
+  ```
+  # Correct:
+  try:
+      return storage.getObject(key)
+  except KeyError:
+      pass 
+  ```
+  
+  ###### Rationale
+  Swallowed exceptions result in hard-to-debug code.
