@@ -1,3 +1,7 @@
+### General guidelines
+
+Push quality hand-crafted code only in 'master'.
+
 ### Modules
 
 * In the usual case, keep each class in a separate module with the same name.
