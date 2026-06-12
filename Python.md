@@ -15,6 +15,32 @@ Push quality hand-crafted code only in 'master'.
 * Name a test class by adding 'Test' to the class under test name (e.g.,
   ``RiskFactorTest`` for ``RiskFactor`` class).
 * Place stub classes for a test in the same module before the test class.
+* When using assertions from the ``unittest`` library, always pass the expected 
+  value as the first argument:
+  ```
+  # Correct:
+  self.assertEqual(
+      date(2024, 5, 13),
+      testedCalendar.getNextDay(date(2024, 5, 8))
+  )
+  ```
+* When using assertion functions from other libraries, use meaningful keyword 
+  arguments: 
+  ```
+  # Correct:
+  numpy.ma.testutils.assert_equal(
+      desired=numpy.array([2, 5, 7]),
+      actual=testedArray.toNumpy()
+  )
+  torch.testing.assert_close(
+      expected=torch.tensor([2, 5, 7]),
+      actual=testedArray.toTorch()
+  )
+  ```
+  ###### Rationale
+  The ``unittest`` library convention is to place the expected value first. 
+  Other libraries other use different parameter orders, so keyword arguments 
+  needed for correct failure messages.
 
 ### Typing
 
